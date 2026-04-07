@@ -1,0 +1,19 @@
+{
+  "name": "openclaudeclaw-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenClaudeClaw Gateway — persistent daemon that bridges messaging platforms to Claude Code",
+  "bin": {
+    "openclaudeclaw": "./cli.js"
+  },
+  "scripts": {
+    "start": "node ./cli.js gateway start",
+    "status": "node ./cli.js gateway status",
+    "install-daemon": "node ./cli.js gateway install-daemon",
+    "check": "node --check ./cli.js && node --check ./gateway.js && node --check ./config.js && node --check ./sessionManager.js && node --check ./auth.js && node --check ./channels/telegram.js && node --check ./daemon.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
