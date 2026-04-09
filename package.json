@@ -5,7 +5,7 @@
   "type": "module",
   "description": "OpenClaudeClaw — Claude Code with a persistent gateway, multi-channel messaging, and multi-model support",
   "bin": {
-    "openclaw": "./gateway/cli.js"
+    "openclaudeclaw": "./gateway/cli.js"
   },
   "scripts": {
     "build": "node scripts/build-cli.mjs --no-minify",

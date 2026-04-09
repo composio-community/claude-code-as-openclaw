@@ -339,6 +339,22 @@ export class Gateway {
     if (!channel) return false
     const text = msg.text.trim()
 
+    if (text === '/start') {
+      await channel.sendMessage(msg.chatId, [
+        'Welcome to OpenClaudeClaw.',
+        'You\'re talking to Claude Code with full tool use, memory, MCP, and cron.',
+        '',
+        'Commands:',
+        '/new — Start a fresh conversation',
+        '/status — Show current session info',
+        '/model <name> — Switch model',
+        '/help — Show this message',
+        '',
+        'Just send a message to get started.',
+      ].join('\n'))
+      return true
+    }
+
     if (text === '!new' || text === '!reset' || text === '/new' || text === '/reset') {
       await clearSession(channelKey)
       await channel.sendMessage(msg.chatId, 'Session cleared. Starting fresh.')
@@ -593,7 +609,6 @@ export class Gateway {
 
       // Load persistent memory
       const memoryContext = await loadMemoryContext()
-      const memoryInstructions = buildMemoryInstructions(gatewayPort)
 
       // Soul prepended (keeps Claude's default coding instructions intact)
       const soul = await readMemoryFile('SOUL.md')
