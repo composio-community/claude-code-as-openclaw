@@ -1,8 +1,8 @@
-# OpenClaudeClaw Gateway
+# OpenClaudeClaw
 
-A persistent daemon that turns Claude Code into a multi-platform AI agent you can message from anywhere. Telegram, WhatsApp, Discord, Slack — talk to Claude Code like you'd talk to a person.
+An open-source OpenClaw alternative powered by Claude Code. 
 
-Full tool use, memory, MCP, cron jobs — everything Claude Code can do, but accessible from your phone.
+Use Claude Code as your AI agent across Telegram, WhatsApp, Discord, and Slack.
 
 ## Quick Start
 
