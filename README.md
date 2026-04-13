@@ -1,4 +1,4 @@
-# OpenClaudeClaw
+# Claude Code as OpenClaw
 
 An open-source OpenClaw alternative powered by Claude Code. 
 
